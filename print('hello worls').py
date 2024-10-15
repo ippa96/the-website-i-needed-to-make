@@ -10,7 +10,12 @@ while True:
         if choice == 'y':
             numbers.append(float(ans))
             input_type = 'operation'
+            print(f"{numbers}{operations}")
+        else:
+            input_type = 'number'
         ans = None  # Reset ans after using it
+    else:
+        input_type = 'number'
 
     while True:
         if input_type == 'number':
@@ -24,6 +29,7 @@ while True:
                     else:
                         print("No numbers to delete.")
                     continue
+                print(f"{numbers}{operations}")
                 numbers.append(float(num))
                 input_type = 'operation'
             except ValueError:
@@ -41,6 +47,7 @@ while True:
                         print("No operations to delete.")
                     continue
                 if op.lower() == 'c':
+                    print(f"Calculate: {numbers}{operations}")
                     if len(numbers) != len(operations) + 1:
                         print("The number of operations must be one less than the number of numbers.")
                         continue
@@ -72,4 +79,4 @@ while True:
     print("Result:", result)
     ans = result  # Store the result for the next loop
     numbers = []
-    operations = []
+    operations = [] 
