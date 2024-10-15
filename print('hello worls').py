@@ -71,3 +71,5 @@ while True:
 
     print("Result:", result)
     ans = result  # Store the result for the next loop
+numbers = []
+operations = []
